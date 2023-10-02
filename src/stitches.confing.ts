@@ -13,27 +13,23 @@ export const {
 } = createStitches({
   theme: {
     fonts: {
-      primary: "Plus Jakarta Sans",
-      secondary: "Anek Tamil",
+      primary: "Sora",
+      secondary: "Raleway",
     },
     colors: {
-      purple100: "#b285dd",
-      purple200: "#a464de",
-      purple300: "#9743df",
-      purple400: "#8921df",
-      purple500: "#7b00e0",
+      turquoise100: "#B9EEF4",
+      turquoise200: "#A1E8F0",
+      turquoise300: "#8AE2EC",
+      turquoise400: "#43D1E1",
+      turquoise500: "#14C5D9",
 
-      salmon100: "#f7bcb2",
-      salmon200: "#faaf9d",
-      salmon300: "#faa38e",
-      salmon400: "#fb9a81",
-      salmon500: "#fc9173",
+      orange100: "#FAC7B4",
+      orange200: "#F9B9A2",
+      orange300: "#F69C7C",
+      orange400: "#F58E69",
+      orange500: "#F27244",
 
-      red100: "#fff2f0",
-      red300: "#ffccc7",
-
-      yellow100: "#fffbe6",
-      yellow300: "#ffe58f",
+      dark: "#030526",
 
       gray50: "#f8f8f8",
       gray100: "#dedede",
@@ -166,7 +162,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    backgroundColor: "$gray900",
+    backgroundColor: "$white",
     color: "$black",
 
     fontSize: "$md",
