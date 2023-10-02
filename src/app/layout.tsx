@@ -1,8 +1,19 @@
-import './globals.css'
+// import './globals.css'
+import { getCssText, globalStyles } from '@/stitches.config'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lexend, Raleway } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const lexend = Lexend({ 
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-lexend',
+  subsets: ['latin'],
+ })
+
+ const raleway = Raleway({ 
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-raleway',
+  subsets: ['latin'],
+ })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,9 +25,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  globalStyles()
+
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
+      </head>
+      <body className={`${lexend.variable} ${raleway.variable}`}>{children}</body>
     </html>
   )
 }

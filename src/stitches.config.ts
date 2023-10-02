@@ -1,5 +1,18 @@
 // stitches.config.ts
 import { createStitches } from '@stitches/react';
+import { Lexend, Raleway } from 'next/font/google'
+
+const lexend = Lexend({ 
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-lexend',
+  subsets: ['latin'],
+ })
+
+ const raleway = Raleway({ 
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-raleway',
+  subsets: ['latin'],
+ })
 
 export const {
   styled,
@@ -13,8 +26,8 @@ export const {
 } = createStitches({
   theme: {
     fonts: {
-      primary: "Sora",
-      secondary: "Raleway",
+      primary: lexend.style.fontFamily,
+      secondary: raleway.style.fontFamily,
     },
     colors: {
       turquoise100: "#B9EEF4",
@@ -29,7 +42,8 @@ export const {
       orange400: "#F58E69",
       orange500: "#F27244",
 
-      dark: "#030526",
+      dark: "#020526",
+      dark2: "#0C0F2B",
 
       gray50: "#f8f8f8",
       gray100: "#dedede",
@@ -45,26 +59,24 @@ export const {
       black: "#000000",
     },
     fontSizes: {
-      "10xl": "120px",
       "9xl": "110px",
       "8xl": "100px",
       "7xl": "90px",
       "6xl": "72px",
-      "5xl": "60px",
-      "4xl": "48px",
+      "5xl": "65px",
+      "4xl": "50px",
       "3xl": "36px",
       "2xl": "30px",
-      "1xl": "24px",
+      "1xl": "25px",
       xl: "20px",
       lg: "18px",
       md: "16px",
       sm: "14px",
       xs: "12px",
+      xss: "10px",
     },
     lineHeights: {
-      "9xl": "120px",
-      "8xl": "110px",
-      "7xl": "100px",
+      "7xl": "95px",
       "6xl": "90px",
       "5xl": "72px",
       "4xl": "60px",
@@ -145,6 +157,11 @@ export const {
     xl: "(max-width: 1250px)",
     "2xl": "(max-width: 1400px)",
   },
+  utils: {
+    linearGradient: (value: string) => ({
+      backgroundImage: `linear-gradient(${value})`,
+    }),
+  }
 });
 
 export const globalStyles = globalCss({
@@ -170,7 +187,7 @@ export const globalStyles = globalCss({
     fontWeight: "$regular",
 
     overflowX: "hidden",
-    fontFamily: "$primary",
+    fontFamily: "$raleway",
 
     width: "100vw",
     minHeight: "100vh",
