@@ -1,16 +1,16 @@
 // stitches.config.ts
 import { createStitches } from '@stitches/react';
-import { Lexend, Raleway } from 'next/font/google'
+import { Outfit, Montserrat } from 'next/font/google'
 
-const lexend = Lexend({ 
+const outfit = Outfit({ 
   weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-lexend',
+  variable: '--font-outfit',
   subsets: ['latin'],
  })
 
- const raleway = Raleway({ 
+ const montserrat = Montserrat({ 
   weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-raleway',
+  variable: '--font-montserrat',
   subsets: ['latin'],
  })
 
@@ -26,24 +26,36 @@ export const {
 } = createStitches({
   theme: {
     fonts: {
-      primary: lexend.style.fontFamily,
-      secondary: raleway.style.fontFamily,
+      primary: outfit.style.fontFamily,
+      secondary: montserrat.style.fontFamily,
     },
     colors: {
-      turquoise100: "#B9EEF4",
-      turquoise200: "#A1E8F0",
-      turquoise300: "#8AE2EC",
+      turquoise100: "#B6EDF3",
+      turquoise200: "#93E4EE",
+      turquoise300: "#62D8E6",
       turquoise400: "#43D1E1",
       turquoise500: "#14C5D9",
 
-      orange100: "#FAC7B4",
-      orange200: "#F9B9A2",
-      orange300: "#F69C7C",
-      orange400: "#F58E69",
-      orange500: "#F27244",
+      salmon100: "#FBD3C5",
+      salmon200: "#F9BEA9",
+      salmon300: "#F6A182",
+      salmon400: "#F58E69",
+      salmon500: "#F27244",
 
-      dark: "#020526",
-      dark2: "#0C0F2B",
+      orange100: "#FFC5B0",
+      orange200: "#FFA98A",
+      orange300: "#FF8254",
+      orange400: "#FF6933",
+      orange500: "#FF4400",
+
+      purple100: "#CEB0ED",
+      purple200: "#B68AE5",
+      purple300: "#9554D9",
+      purple400: "#8133D1",
+      purple500: "#6100C6",
+
+      dark: "#020418",
+      dark2: "#090B1F",
 
       gray50: "#f8f8f8",
       gray100: "#dedede",
